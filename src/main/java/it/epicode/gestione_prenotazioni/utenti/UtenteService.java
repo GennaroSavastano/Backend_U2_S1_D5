@@ -37,7 +37,7 @@ public class UtenteService {
         if (username == null) {
             throw new IllegalArgumentException("Utente con username " + username  + " non trovato");
         }
-        return utenteRepository.findByUsername(username)
+        return utenteRepository.findByUsername(username);
     }
 
     // ottieni tutti gli utenti

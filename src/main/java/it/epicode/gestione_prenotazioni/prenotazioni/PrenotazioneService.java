@@ -47,7 +47,7 @@ public class PrenotazioneService {
             throw new IllegalArgumentException("L'utente ha già prenotato per quella data");
         }
         // controlla se la postazione è libera per quella data
-        if (prenotazioneRepository.exsistsByPostazioneAndDataPrenotazione(postazione, dataPrenotazione)) {
+        if (prenotazioneRepository.existsByPostazioneAndDataPrenotazione(postazione, dataPrenotazione)) {
             throw new IllegalArgumentException("La postazione non é libera per quella data");
         }
         Prenotazione nuovaPrenotazione = new Prenotazione(utente, postazione, dataPrenotazione);
